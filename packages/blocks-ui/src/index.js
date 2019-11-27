@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import { Styled, jsx } from 'theme-ui'
 import * as presets from '@theme-ui/presets'
@@ -240,10 +240,8 @@ export default ({ src: initialCode, blocks: providedBlocks, onChange }) => {
     setCode(newCode)
   }
 
-  console.log(elementData)
-
   return (
-    <Layout elementData={elementData} theme={theme}>
+    <Layout elementData={elementData} theme={appTheme}>
       <Header />
       <DragDropContext
         onDragEnd={onDragEnd}
@@ -264,7 +262,8 @@ export default ({ src: initialCode, blocks: providedBlocks, onChange }) => {
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             blocks={blocks}
-            theme={appTheme}
+            srcBlocks={srcBlocks}
+            theme={theme}
             themeName={themeName}
             elementData={elementData}
             handleChange={handleChange}
