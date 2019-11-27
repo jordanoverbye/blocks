@@ -123,9 +123,9 @@ export default ({
           ) : null}
         </TabPanel>
         <TabPanel>
-          {activeTab === 1 ? (
+          {activeTab === 1 && (
             <BlocksListing components={blocks} theme={theme} />
-          ) : null}
+          )}
         </TabPanel>
         <TabPanel>
           <ThemePanel themeName={themeName} setThemeName={setThemeName} />
