@@ -262,7 +262,6 @@ export default ({ src: initialCode, blocks: providedBlocks, onChange }) => {
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             blocks={blocks}
-            srcBlocks={srcBlocks}
             theme={theme}
             themeName={themeName}
             elementData={elementData}
